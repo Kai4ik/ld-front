@@ -2,5 +2,8 @@ services:
   app:
     container_name: react-front
     build: .
+    environment:
+      - NEXT_PUBLIC_USER_POOL_ID=us-east-1_uqaRFvTEK
+      - NEXT_PUBLIC_USER_POOL_CLIENT_ID=2h08m5mvr7k95hp5pa8ktnuolf
     ports:
       - "3000:3000"

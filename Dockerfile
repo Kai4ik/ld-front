@@ -23,6 +23,8 @@ WORKDIR /app
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 
+ENV NEXT_PUBLIC_USER_POOL_ID us-east-1_uqaRFvTEK
+ENV NEXT_PUBLIC_USER_POOL_CLIENT_ID 2h08m5mvr7k95hp5pa8ktnuolf
 
 RUN npm run build
 
@@ -49,7 +51,6 @@ USER nextjs
 EXPOSE 3000
 
 ENV PORT 3000
-ENV NEXT_PUBLIC_USER_POOL_ID us-east-1_uqaRFvTEK
-ENV NEXT_PUBLIC_USER_POOL_CLIENT_ID 2h08m5mvr7k95hp5pa8ktnuolf
+
 
 CMD ["node", "server.js"]
