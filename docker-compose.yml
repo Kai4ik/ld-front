@@ -1,0 +1,6 @@
+services:
+  app:
+    container_name: react-front
+    build: .
+    ports:
+      - "3000:3000"
